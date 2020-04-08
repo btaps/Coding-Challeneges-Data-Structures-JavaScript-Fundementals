@@ -12,11 +12,13 @@ class HashTable {
 
   resize = () => {
     const newTable = new Array(this.table.length * 2);
+    console.log(newTable.length);
     this.table.forEach(item => {
       if (item) {
         item.forEach(([key, value]) => {
           const idx = hashStringToInt(key, newTable.length);
           if (this.table[idx]) {
+            //console.log([key, value]);
             newTable[idx].push([key, value]);
           } else {
             newTable[idx] = [[key, value]];
@@ -57,11 +59,12 @@ class HashTable {
 
 const myTable = new HashTable();
 
+console.log(myTable.table.length);
 myTable.setItem("lastName", "Tim");
 myTable.setItem("age", 5);
 myTable.setItem("dob", "1/2/3");
 myTable.setItem("firstName", "bob");
-console.log(myTable.table);
+console.log(myTable.table.length);
 console.log(myTable.getItem("lastName"));
 console.log(myTable.getItem("firstName"));
 console.log(myTable.getItem("age"));

@@ -27,7 +27,7 @@ repeatedString has the following parameter(s):
 
 // use n = the length of the string to use
 // use s = the string to use
-// s is repeated infinitely 
+// s is repeated infinitely
 
 // take the string and make it repeate infinitely
 // Condition the string length is equal to the number n
@@ -41,36 +41,26 @@ add a + As = totals a
 */
 // Complete the repeatedString function below.
 function repeatedString(s, n) {
-  var str = s.split("")
-  
- // console.log(str)
+  var str = s.split("");
+
+  console.log(str);
   var stringSize = s.length;
- // console.log(stringSize)
-  var a = str.filter((a) => a == 'a').length;
- // console.log(a)
-  var repeat = Math.floor(n/stringSize);
- // console.log(repeat)
-  var left = n%repeat;
- // console.log(left)
-
-  return (repeat*a) + str.filter((a,i) => a == 'a' && i < left).length;
+  console.log(stringSize);
+  var a = str.filter(a => a == "a").length;
+  console.log(a);
+  var repeat = Math.floor(n / stringSize);
+  console.log(repeat);
+  var left = n % repeat;
+  console.log(left);
+  console.log(str.filter((a, i) => a == "a" && i < left));
+  return repeat * a + str.filter((a, i) => a == "a" && i < left).length;
 }
-
 
 function repeatedString2(s, n) {
-  let repeat = s.repeat(n).split('')
-  repeat.length = n
-  repeat = repeat.filter(a => a==='a' ).length
-  return repeat
+  let repeat = s.repeat(n).split("");
+  repeat.length = n;
+  repeat = repeat.filter(a => a === "a").length;
+  return repeat;
 }
 
-console.log(repeatedString('a', 100000000000000000000000))
-
-
-
-
-
-
-
-
-
+console.log(repeatedString("aba", 1000));

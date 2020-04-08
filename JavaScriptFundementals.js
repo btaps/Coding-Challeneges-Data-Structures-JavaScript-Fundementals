@@ -1,3 +1,8 @@
+//////////////////////////////////// NUMBERS /////////////////////////////////////////
+
+let myNum = 0.3333337;
+//console.log(myNum.toFixed(6)); // round to the 6th decimal place. returns a STRING
+
 //////////////////////////////////// STRINGS /////////////////////////////////////////
 let str = "Hello my name is Bruno";
 
@@ -17,8 +22,24 @@ let slicedStr = str.slice(2);
 let slicedStr2 = str.slice(0, 8);
 //console.log(slicedStr2) // Hello my
 
+let slicedStr3 = str.slice(2);
+//console.log(slicedStr3);
+
 // replace a string with a value
-//console.log(str.replace('Bruno','Shelby')) // Hello my name is Shelby
+console.log(str.replace("Bruno", "Shelby")); // Hello my name is Shelby
+
+// padStart() will fill the empty spaces from the left with <empty spaces> unless given a value.
+// Here we give the length of the fullNumber as the number of <empty spaces> and the '*' as the value to fill those spaces.
+const fullNumber = "2034399002125581";
+const last4Digits = fullNumber.slice(-4);
+const maskedNumber = last4Digits.padStart(fullNumber.length, "*");
+
+//console.log(maskedNumber);
+
+// the repeat() just repeats the string a given ammount of times
+const strToRepeat = "This is a repeating string. ";
+
+//console.log(strToRepeat.repeat(2));
 
 // splits every single character into an array including spaces
 let myArr3 = str.split("");
@@ -92,7 +113,7 @@ let map1 = numArr.map((num, i) => i);
 
 // using filter
 // returns a new array with the number of elements that met the condition
-let myFilter = numArr.filter(num => num > 3);
+let myFilter = numArr.filter((num) => num > 3);
 //console.log(myFilter) //[ 4, 5, 6 ]
 
 // using reducer,

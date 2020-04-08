@@ -5,12 +5,13 @@ const hash = (string, max) => {
   for (let i = 0; i < string.length; i++) {
     hash += string.charCodeAt(i);
   }
-  return hash % max;
+  return hash % max; // 'bruno' = idx(19)  'dan' = idx(19)
+  // 'bruno',
 };
 
 let HashTable = function() {
   let storage = [];
-  const storageLimit = 100;
+  const storageLimit = 3;
 
   this.print = () => console.log(storage);
 
@@ -22,12 +23,12 @@ let HashTable = function() {
       let inserted = false;
       for (let i = 0; i < storage[index].length; i++) {
         if (storage[index][i][0] === key) {
-          storage[index][i][1] = value;
+          storage[index][i][1] = value; // [[bruno,dad]]
           inserted = true;
         }
       }
       if (inserted === false) {
-        storage[index].push([key, value]);
+        storage[index].push([key, value]); // [[bruno,dad],[bruno, GREAT]]
       }
     }
   };
@@ -68,6 +69,12 @@ ht.add("Little B", "son");
 ht.add("cheeks", "dog");
 ht.add("stella", "dog");
 
-console.log(ht.lookup("cheeks"));
-
 ht.print();
+console.log(ht.lookup("Little B"));
+
+//ht.add(1, true);
+//ht.add(2, true);
+//ht.add(2, true);
+//ht.add(4, true);
+//ht.print();
+//console.log(ht.lookup(2));

@@ -2,8 +2,8 @@
 
 function swap(array, index1, index2) {
   let swap = array[index1];
-  arr[index1] = array[index2];
-  arr[index2] = swap;
+  array[index1] = array[index2];
+  array[index2] = swap;
 }
 
 function minimumSwaps(arr) {
