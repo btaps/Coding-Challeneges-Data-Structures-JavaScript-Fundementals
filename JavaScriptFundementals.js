@@ -141,12 +141,12 @@ let clone = [...original]; // NO REFERENCE
 //console.log(original === copy) // TRUE      THEY ARE REFERENCING THE SAME MEMORY SPACE
 //console.log(original === clone) // FALSE    THEY ARE POINTING TO TWO DIFFERENT MEMORY SPACE
 
-////////////////////////////////////////// ONJECTS /////////////////////////////////////////////////
+////////////////////////////////////////// OBJECTS /////////////////////////////////////////////////
 
 // Make an object with keys as an index of the array and values as the elements
 let arr3 = [1, 2, 3, 4, 5, 6];
 let myObj = Object.assign({}, arr3);
-//console.log(myObj)
+//console.log(myObj); //{ '0': 1, '1': 2, '2': 3, '3': 4, '4': 5, '5': 6 }
 
 ////////////////////////////////////////// CONSOLE /////////////////////////////////////////////////
 
